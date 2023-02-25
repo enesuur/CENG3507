@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
+    <title>Student Management System | SMS </title>
+</head>
+
+<body>
+    <div class="announcement-bar">
+        <p>Lecture Management System is open, you can complete your enrollment until 20th December.!</p>
+    </div>
+    <!-- Adding student section -->
+    <section class="enrollStudent-bar">
+        <label>Student ID:
+            <input type="number" id="studentId">
+        </label>
+        <label>First Name:
+            <input type="text" id="name">
+        </label>
+        <label>Last Name:
+            <input type="text" id="lastName">
+        </label>
+        <label>Midterm Grade:
+            <input type="number" id="midterm">
+        </label>
+        <label>Final Grade:
+            <input type="number" id="final">
+        </label>
+        <label for="selectLecture">Choose a Lecture
+            <select name="selectLecture" id="selectLecture">
+            </select>
+        </label>
+
+        <button id="addStudent">Add Student</button>
+        <button id="btnUpdateStudent">Complete updating</button>
+    </section>
+    <!-- Adding lecture section -->
+    <section class="enrollLecture-bar">
+        <div class="input-bar">
+            <label for="lectureId">
+                Lecture Id:
+                <input type="number" id="lectureId">
+            </label>
+        </div>
+        <div class="input-bar">
+            <label for="lectureName">
+                Lecture Name:
+                <input type="text" id="lectureName">
+            </label>
+        </div>
+        <div class="input-bar">
+            <label for="tenScale">
+                <input type="radio" id="tenScale" name="pointScale" value="10">
+                10
+            </label>
+        </div>
+        <div class="input-bar">
+            <label for="sevenScale">
+                <input type="radio" id="sevenScale" name="pointScale" value="7">
+                7
+            </label>
+        </div>
+        <Button id="addLecture">Add Lecture</Button>
+    </section>
+    <!-- Lecture results -->
+    <section class="lectureResults-bar">
+        <!-- Results of the students grouped by lecture -->
+        <label>Select a lecture to display results
+            <select id="lectureResults"></select>
+        </label>
+        <label for="passed">Passed
+            <input type="radio" name="studentResult" value="passed" id="passed">
+        </label>
+        <label for="failed">Failed
+            <input type="radio" name="studentResult" value="failed" id="failed">
+        </label>
+        <label for="allStudent">All Students
+            <input type="radio" name="studentResult" value="allStudents" id="allStudent">
+        </label>
+        <label for="tenScaleResults">
+            10
+            <input type="radio" id="tenScaleResultS" name="pointScaleResult" value="10">
+        </label>
+        <label for="sevenScaleResults">
+            7
+            <input type="radio" id="sevenScaleResults" name="pointScaleResult" value="7">
+        </label>
+        <button id="btnLectureResults">Display</button>
+    </section>
+    <!-- Lecture Details -->
+    <section class="lectureDetails-bar">
+        <label>Select a lecture to display results
+            <select id="lectureDetails"></select>
+        </label>
+        <label for="tenScaleLecture">
+            <input type="radio" id="tenScaleLecture" name="scaleLectureResult" value="10">
+            10 Scale
+        </label>
+        <label for="sevenScaleLecture">
+            <input type="radio" id="sevenScaleLecture" name="scaleLectureResult" value="7">
+            7 Scale
+        </label>
+        <button id="btnLectureDetails">Display Lecture Details</button>
+    </section>
+    <!-- Student container for displaying students result -->
+    <div>Search Student</div>
+    <div class="table-container">
+        <input id='searchStudent' type='text'>
+        <button id="btnShowStudents">Show Students</button>
+        <table class="table table-striped table-bordered" id="studentTable">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Lastname</td>
+                    <td>Fullname</td>
+                    <td>Midterm</td>
+                    <td>Final</td>
+                    <td>ResultScore</td>
+                    <td>LetterGrade</td>
+                    <td>Lecture</td>
+                    <td>GPA</td>
+                </tr>
+            </thead>
+            <tbody id="studentData">
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Lecture Table container for display lecture details -->
+    <div class="table-container">
+        <table class="table table-striped table-bordered" id="lectureTable">
+            <thead>
+                <tr>
+                    <td>LectureName</td>
+                    <td>MidtermMean</td>
+                    <td>FinalMean</td>
+                    <td>ScoreMean</td>
+                    <td>Passed</td>
+                    <td>Failed</td>
+                    <td>TotalStudents</td>
+                </tr>
+            </thead>
+            <tbody id="lectureData">
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+
+</html>
